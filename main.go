@@ -30,7 +30,6 @@ import (
 	"time"
 
 	"github.com/b3log/pipe/controller"
-	"github.com/b3log/pipe/cron"
 	"github.com/b3log/pipe/i18n"
 	"github.com/b3log/pipe/log"
 	"github.com/b3log/pipe/model"
@@ -68,7 +67,7 @@ func init() {
 func main() {
 	service.ConnectDB()
 	service.Upgrade.Perform()
-	cron.Start()
+	//cron.Start()
 
 	router := controller.MapRoutes()
 	server := &http.Server{
