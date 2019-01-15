@@ -3,13 +3,13 @@
     <div class="card login">
       <h1>{{$t('register', $store.state.locale)}}</h1>
       <div class="ft-center login__content" v-if="account===''">
-        <div class="fn-pointer" @click="loginGitHub">
+        <div v-if="false" class="fn-pointer" @click="loginGitHub">
           {{ $t('useGitHub', $store.state.locale) }}{{ $t('login', $store.state.locale) }}
           <div class="login__github"></div>
           <img class="fn-none" src="~assets/images/github.gif"/>
         </div>
 
-        <a class="login__link fn-flex-center" href="https://hacpai.com/register"
+        <a v-if="false" class="login__link fn-flex-center" href="https://hacpai.com/register"
            target="_blank">
           <v-icon>hacpai-logo</v-icon>
           <div>&nbsp;{{ $t('useHacpaiInit', $store.state.locale) }}</div>

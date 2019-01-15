@@ -22,15 +22,15 @@ import (
 	"path/filepath"
 
 	"github.com/b3log/pipe/log"
-	"github.com/b3log/pipe/util"
 	"github.com/b3log/pipe/model"
+	"github.com/b3log/pipe/util"
 )
 
 // Logger
 var logger = log.NewLogger(os.Stdout)
 
 // DefaultTheme represents the default theme name.
-const DefaultTheme = "Littlewin"
+const DefaultTheme = "Fara"
 
 // Themes saves all theme names.
 var Themes []string
