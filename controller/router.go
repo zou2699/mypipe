@@ -82,7 +82,8 @@ func MapRoutes() *gin.Engine {
 	// 关闭文章推送
 	//api.Any("/hp/*apis", util.HacPaiAPI())
 	api.GET("/status", getStatusAction)
-	api.GET("/check-version", console.CheckVersionAction)
+	// 关闭版本检查
+	//api.GET("/check-version", console.CheckVersionAction)
 	api.GET("/blogs/top", showTopBlogsAction)
 	api.GET("/oauth/github/redirect", redirectGitHubLoginAction)
 	api.GET("/oauth/github/callback", githubCallbackAction)

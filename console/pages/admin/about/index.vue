@@ -66,14 +66,14 @@
       return {
         title: `${this.$t('about', this.$store.state.locale)} - ${this.$store.state.blogTitle}`
       }
-    },
-    async mounted () {
-      const responseData = await this.axios.get(`check-version`)
-      if (responseData) {
-        this.$set(this, 'isLatest', this.$store.state.version === responseData.version)
-        this.$set(this, 'download', responseData.download)
-        this.$set(this, 'version', responseData.version)
-      }
+    // },
+    // async mounted () {
+    //   const responseData = await this.axios.get(`check-version`)
+    //   if (responseData) {
+    //     this.$set(this, 'isLatest', this.$store.state.version === responseData.version)
+    //     this.$set(this, 'download', responseData.download)
+    //     this.$set(this, 'version', responseData.version)
+    //   }
     }
   }
 </script>
