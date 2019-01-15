@@ -19,3 +19,4 @@ pipe
 # IDE
 .idea/
 
+/pipe.db

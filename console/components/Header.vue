@@ -120,7 +120,9 @@
         // TODO
         const responseData = await this.axios.post('/logout')
         if (responseData.code === 0) {
-          window.location.href = 'https://hacpai.com/logout'
+          // logout跳转页面
+         // window.location.href = 'https://hacpai.com/logout'
+          window.location.href = '/'
         } else {
           this.commit('setSnackBar', {
             snackBar: true,

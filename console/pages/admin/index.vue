@@ -36,7 +36,9 @@
         })
         this.$set(this, 'tags', tags.substr(0, tags.length - 1))
       }
-      const responseData = await this.axios.get(`/hp/apis/articles?tags=${this.tags}&format=json`)
+      // 关闭后台文章推送
+      //const responseData = await this.axios.get(`/hp/apis/articles?tags=${this.tags}&format=json`)
+      const responseData = ''
       if (responseData) {
         this.$set(this, 'list', responseData)
       }

@@ -60,7 +60,7 @@ func MapRoutes() *gin.Engine {
 	})
 
 	ret.Use(gin.Recovery())
-
+	ret.Use(gin.Logger())
 	store := sessions.NewCookieStore([]byte(model.Conf.SessionSecret))
 	store.Options(sessions.Options{
 		Path:     "/",
@@ -79,7 +79,8 @@ func MapRoutes() *gin.Engine {
 	api.POST("/register", registerAction)
 	api.POST("/login", loginAction)
 	api.POST("/logout", logoutAction)
-	api.Any("/hp/*apis", util.HacPaiAPI())
+	// 关闭文章推送
+	//api.Any("/hp/*apis", util.HacPaiAPI())
 	api.GET("/status", getStatusAction)
 	api.GET("/check-version", console.CheckVersionAction)
 	api.GET("/blogs/top", showTopBlogsAction)
