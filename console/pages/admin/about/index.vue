@@ -4,26 +4,26 @@
       <div class="fn-flex admin__about">
         <div class="about__side">
           <img src="~assets/images/logo.png"/> <br>
-          <a class="btn btn--info btn--margin-t30 btn--block btn--success"
+          <a v-if="false" class="btn btn--info btn--margin-t30 btn--block btn--success"
              target="_blank"
              href="https://b3log.org/donate.html">{{ $t('becomeSponsor', $store.state.locale) }}</a>
         </div>
         <div class="fn-flex-1 pipe-content__reset">
           <h2 class="fn-clear" v-if="isLatest">
-            <span class="fn-left">
+            <span  class="fn-left">
               {{ $t('about1', $store.state.locale) }}
               <a :href="download" target="_blank">{{ version }}</a>
             </span>
-            <iframe class="about__github fn-left"
+            <iframe v-if="false" class="about__github fn-left"
                     src="https://ghbtns.com/github-btn.html?user=b3log&repo=pipe&type=star&count=true&size=large"
                     frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
           </h2>
-          <h2 class="fn-clear" v-else>
+          <h2 v-if="false" class="fn-clear" v-else>
             <span class="fn-left">
                {{ $t('about2', $store.state.locale) }}
               <a class="ft-danger" :href="download" target="_blank">{{ version }}</a>
             </span>
-            <iframe class="about__github fn-left"
+            <iframe  class="about__github fn-left"
                     src="https://ghbtns.com/github-btn.html?user=b3log&repo=pipe&type=star&count=true&size=large"
                     frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
           </h2>
