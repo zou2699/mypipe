@@ -70,7 +70,7 @@ func initLocalAction(c *gin.Context) {
 	platformAdmin := &model.User{
 		Name:      name,
 		Password:  password,
-		AvatarURL: "https://img.hacpai.com/pipe/default-avatar.png",
+		AvatarURL: "/theme/images/mylogo.png",
 	}
 
 	if err := service.Init.InitPlatform(platformAdmin); nil != err {

@@ -5,13 +5,13 @@
         <v-stepper-content step="1" class="fn-clear">
           <h1>Pipe {{ $t(account === 'pipe' ? 'init' : 'guide', $store.state.locale) }}</h1>
           <div class="ft-center login__content" v-if="account===''">
-            <div class="fn-pointer" @click="loginGitHub">
+            <div v-if="false" class="fn-pointer" @click="loginGitHub">
               {{ $t('useGitHub', $store.state.locale) }}{{ $t('login', $store.state.locale) }}
               <div class="login__github"></div>
               <img class="fn-none" src="~assets/images/github.gif"/>
             </div>
 
-            <div class="login__link fn-flex-center fn-pointer"
+            <div v-if="false" class="login__link fn-flex-center fn-pointer"
                  @click="hacpaiInit">
               <v-icon>hacpai-logo</v-icon>
               <div>&nbsp;{{ $t('useHacpaiInit', $store.state.locale) }}</div>
@@ -95,14 +95,14 @@
         <v-stepper-content step="3" class="fn-clear">
           <h1>{{ $t('welcome', $store.state.locale) }} Pipe</h1>
           <div class="ft-center login__content fn-clear">
-            <a href="https://github.com/b3log/pipe"
+            <a href="/"
                target="_blank"
                :aria-label="$t('openPipeTravel', $store.state.locale)"
                class="card login__image init__image--step3 pipe-tooltipped pipe-tooltipped--n">
                 <img src="~assets/images/logo.png"/>
             </a>
-            <div class="init__text">{{$t('starIsMotivation', $store.state.locale)}}</div>
-            <iframe src="https://ghbtns.com/github-btn.html?user=b3log&repo=pipe&type=star&count=true&size=large"
+            <div v-if="false" class="init__text">{{$t('starIsMotivation', $store.state.locale)}}</div>
+            <iframe v-if="false" src="https://ghbtns.com/github-btn.html?user=b3log&repo=pipe&type=star&count=true&size=large"
                     frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
           </div>
         </v-stepper-content>

@@ -212,9 +212,9 @@ func initBlogAdmin(tx *gorm.DB, admin *model.User, blogID uint64) error {
 
 func initNavigation(tx *gorm.DB, blogID uint64) error {
 	navigation := &model.Navigation{
-		Title:      "黑客派",
-		URL:        util.HacPaiURL,
-		IconURL:    "https://static.hacpai.com/images/hacpai/logo@72.png",
+		Title:      "在风中",
+		URL:        util.MyUrl,
+		IconURL:    "/theme/images/mylogo.png",
 		OpenMethod: model.NavigationOpenMethodBlank,
 		Number:     0,
 		BlogID:     blogID,
@@ -329,7 +329,7 @@ func initBasicSettings(tx *gorm.DB, blogAdmin *model.User, blogID uint64) error 
 	if err := tx.Create(&model.Setting{
 		Category: model.SettingCategoryBasic,
 		Name:     model.SettingNameBasicBlogSubtitle,
-		Value:    "记录精彩的程序人生",
+		Value:    "记录精彩人生",
 		BlogID:   blogID}).Error; nil != err {
 		return err
 	}
@@ -385,14 +385,14 @@ func initBasicSettings(tx *gorm.DB, blogAdmin *model.User, blogID uint64) error 
 	if err := tx.Create(&model.Setting{
 		Category: model.SettingCategoryBasic,
 		Name:     model.SettingNameBasicFaviconURL,
-		Value:    "https://img.hacpai.com/pipe.ico",
+		Value:    "/favicon.ico",
 		BlogID:   blogID}).Error; nil != err {
 		return err
 	}
 	if err := tx.Create(&model.Setting{
 		Category: model.SettingCategoryBasic,
 		Name:     model.SettingNameBasicLogoURL,
-		Value:    "https://img.hacpai.com/pipe192.png",
+		Value:    "/theme/images/mylogo.png",
 		BlogID:   blogID}).Error; nil != err {
 		return err
 	}

@@ -130,7 +130,7 @@ func registerAction(c *gin.Context) {
 		return
 	}
 
-	avatarURL := "https://img.hacpai.com/pipe/default-avatar.png"
+	avatarURL := "/theme/images/mylogo.png"
 
 	platformAdmin := service.User.GetPlatformAdmin()
 	key := "pipe/" + platformAdmin.Name + "/" + name + "/" + name + "/" + strings.Replace(uuid.NewV4().String(), "-", "", -1) + ".jpg"

@@ -28,6 +28,7 @@ import (
 
 // HacPaiURL is the URL of HacPai community.
 const HacPaiURL = "https://hacpai.com"
+const MyUrl = "https://zouhl.com"
 
 // HacPaiAPI is a reverse proxy for https://hacpai.com.
 func HacPaiAPI() gin.HandlerFunc {
