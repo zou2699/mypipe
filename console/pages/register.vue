@@ -2,24 +2,25 @@
   <div class="console" id="particles">
     <div class="card login">
       <h1>{{$t('register', $store.state.locale)}}</h1>
-      <div class="ft-center login__content" v-if="account===''">
-        <div v-if="false" class="fn-pointer" @click="loginGitHub">
-          {{ $t('useGitHub', $store.state.locale) }}{{ $t('login', $store.state.locale) }}
-          <div class="login__github"></div>
-          <img class="fn-none" src="~assets/images/github.gif"/>
-        </div>
+      <!--<div class="ft-center login__content" v-if="account===''">-->
+        <!--<div class="fn-pointer" @click="loginGitHub">-->
+          <!--{{ $t('useGitHub', $store.state.locale) }}{{ $t('login', $store.state.locale) }}-->
+          <!--<div class="login__github"></div>-->
+          <!--<img class="fn-none" src="~assets/images/github.gif"/>-->
+        <!--</div>-->
 
-        <a v-if="false" class="login__link fn-flex-center" href="https://hacpai.com/register"
-           target="_blank">
-          <v-icon>hacpai-logo</v-icon>
-          <div>&nbsp;{{ $t('useHacpaiInit', $store.state.locale) }}</div>
-        </a>
-        <div class="login__link fn-pointer fn-flex-center" @click="account='pipe'">
-          <img width="16" src="~assets/images/logo.png"/>
-          <span>&nbsp;{{ $t('usePipeInit', $store.state.locale) }}</span>
-        </div>
-      </div>
-      <div v-if="account==='pipe'">
+        <!--<a class="login__link fn-flex-center" href="https://hacpai.com/register"-->
+           <!--target="_blank">-->
+          <!--<v-icon>hacpai-logo</v-icon>-->
+          <!--<div>&nbsp;{{ $t('useHacpaiInit', $store.state.locale) }}</div>-->
+        <!--</a>-->
+        <!--<div class="login__link fn-pointer fn-flex-center" @click="account='pipe'">-->
+          <!--<img width="16" src="~assets/images/logo.png"/>-->
+          <!--<span>&nbsp;{{ $t('usePipeInit', $store.state.locale) }}</span>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div v-if="account==='pipe'">-->
+      <div>
         <br>
         <v-form ref="accountForm" @submit.prevent="init">
           <v-text-field
@@ -44,7 +45,7 @@
           <span>{{ errorMsg }}</span>
         </div>
         <div class="fn-right">
-          <v-btn class="btn--info" @click="account = ''">{{ $t('preStep', $store.state.locale) }}</v-btn>
+          <!--<v-btn class="btn&#45;&#45;info" @click="account = ''">{{ $t('preStep', $store.state.locale) }}</v-btn>-->
           <v-btn
             class="btn--success btn--space"
             @click="register">{{ $t('register', $store.state.locale) }}
