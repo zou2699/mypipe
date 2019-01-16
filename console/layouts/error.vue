@@ -19,8 +19,9 @@
           <div class="card__body fn-clear">
             <div class="error__description">{{error.statusCode}}</div>
             <div class="fn-right">
-              <a href="https://github.com/b3log/pipe/issues/new">{{ $t('reportIssue', $store.state.locale)}}</a> |
-              <a href="https://hacpai.com">{{ $t('hacpai', $store.state.locale)}}</a>
+              <nuxt-link to="/">{{ $t('index', $store.state.locale)}}</nuxt-link>
+              <!--<a href="https://github.com/b3log/pipe/issues/new">{{ $t('reportIssue', $store.state.locale)}}</a> |-->
+              <!--<a href="https://hacpai.com">{{ $t('hacpai', $store.state.locale)}}</a>-->
             </div>
           </div>
         </div>

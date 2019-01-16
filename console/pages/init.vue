@@ -162,7 +162,7 @@
         if (this.$store.state.name !== '') {
           this.$set(this, 'step', 2)
         } else {
-          window.open('https://hacpai.com/login')
+          window.open('/login')
         }
       },
       async localInit () {

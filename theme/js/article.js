@@ -117,7 +117,7 @@ export const InitHljs = () => {
 export const ShowEditor = (reply, id, commentId) => {
   const $editor = $('#pipeEditor')
   if ($editor.length === 0) {
-    location.href = 'https://hacpai.com/login'
+    location.href = '/login'
     return
   }
   if (commentId) {

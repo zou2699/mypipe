@@ -244,7 +244,7 @@ export const Logout = () => {
     url: `${config.Server}/api/logout`,
     type: 'POST',
     success: (result) => {
-      window.location.href = 'https://hacpai.com/logout'
+      window.location.href = '/logout'
     }
   })
 }
