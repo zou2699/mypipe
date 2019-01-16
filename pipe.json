@@ -1,11 +1,11 @@
 {
     "Server": "http://localhost:5897",
     "StaticServer": "",
-    "StaticResourceVersion": "1547601256179",
+    "StaticResourceVersion": "1547606439808",
     "OpenRegister": true,
     "RuntimeMode": "dev",
     "LogLevel": "debug",
-    "ShowSQL": false,
+    "ShowSQL": true,
     "SessionSecret": "BEYOND",
     "SessionMaxAge": 86400,
     "SQLite": "./pipe.db",

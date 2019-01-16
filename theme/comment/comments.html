@@ -1,51 +1,22 @@
 {{define "comment/comments"}}
-<div id="pipeCommentsWrap">
-{{if gt (len .Comments) 0}}
-<div id="pipeComments" class="fn-clear"
-     data-title="{{.I18n.Comment}}{{.I18n.Colon}}{{.Article.Title}}"
-     data-id="{{.Article.ID}}">
-    <div class="pipe-comment__header">
-        <span id="pipeCommentsCnt">{{.Article.CommentCount}}</span> {{$.I18n.Comment}}
-    </div>
-    <div>
-        {{range .Comments}}
-        {{template "comment/comment" dict "Item" . "I18n" $.I18n "Username" $.User.UName "ArticleID" $.Article.ID}}
-        {{end}}
-    </div>
+    <div id="disqus_thread"></div>
+    <script>
 
-    <nav class="pipe-comment__pagination fn-clear">
-        {{if gt $.Pagination.PageCount 0}}
-            {{if gt $.Pagination.PreviousPageNum 0}}
-            <a class="pipe-comment__btn" href="?p={{$.Pagination.PreviousPageNum}}">
-                <svg><use xlink:href="#icon-chevron-left"></use></svg>
-                <span class="fn-left">{{$.I18n.prePage}}</span>
-            </a>
-            {{end}}
-            {{if lt $.Pagination.CurrentPageNum $.Pagination.PageCount}}
-            <a class="pipe-comment__btn" href="?p={{$.Pagination.NextPageNum}}">
-                <span class="fn-left">{{$.I18n.nextPage}}&nbsp;</span>
-                <svg><use xlink:href="#icon-chevron-right"></use></svg>
-            </a>
-            {{end}}
-        {{end}}
-
-        <span class="pipe-comment__btn fn-right"
-              data-text="{{$.I18n.Comment}}{{$.I18n.Colon}}{{$.Article.Title}}"
-              data-id="{{$.Article.ID}}" id="pipeCommentBottomComment">
-             <svg><use xlink:href="#icon-reply"></use></svg> {{$.I18n.Comment}}
-        </span>
-    </nav>
-</div>
-{{else}}
-<div class="pipe-comment__null fn-clear"
-     data-title="{{.I18n.Comment}}{{.I18n.Colon}}{{.Article.Title}}"
-     data-id="{{.Article.ID}}"
-     id="pipeComments">
-    <svg>
-        <use xlink:href="#icon-reply"></use>
-    </svg>
-    {{.I18n.StayStep}}
-</div>
-{{end}}
-</div>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+        /*
+        var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        */
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://zouhl-com.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 {{end}}
