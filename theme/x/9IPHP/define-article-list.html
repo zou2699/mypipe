@@ -47,15 +47,13 @@
                             <svg><use xlink:href="#icon-view"></use></svg>
                             {{.ViewCount}} {{$.I18n.View}}
                         </span>
-                {{if gt .CommentCount 0}}
                 &nbsp; | &nbsp;
-                <a href="{{.URL}}#pipeComments" class="fn-nowrap">
-                    <svg>
-                        <use xlink:href="#icon-cmts"></use>
-                    </svg>
-                    {{.CommentCount}} {{$.I18n.Comment}}
+                <svg>
+                    <use xlink:href="#icon-cmts"></use>
+                </svg>
+                <a href="{{.URL}}#disqus_thread" class="fn-nowrap">
+                    0 Comment
                 </a>
-                {{end}}
             </div>
         </header>
         {{if .Abstract}}

@@ -42,15 +42,13 @@
                         <svg><use xlink:href="#icon-view"></use></svg>
                         {{.Article.ViewCount}} {{$.I18n.View}}
                     </span>
-                    {{if gt .Article.CommentCount 0}}
                     &nbsp; | &nbsp;
-                    <a href="{{.Article.URL}}#pipeComments" class="fn-nowrap">
-                        <svg>
-                            <use xlink:href="#icon-cmts"></use>
-                        </svg>
-                        {{.Article.CommentCount}} {{$.I18n.Comment}}
+                    <svg>
+                        <use xlink:href="#icon-cmts"></use>
+                    </svg>
+                    <a href="{{.Article.URL}}#disqus_thread" class="fn-nowrap">
+                        0 Comment
                     </a>
-                    {{end}}
                 </div>
             </header>
             <section class="pipe-content__reset" id="articleContent"

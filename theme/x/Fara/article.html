@@ -33,12 +33,8 @@
                     </a>
                     {{end}}
                     ,  {{.Article.ViewCount}} {{$.I18n.View}}
-                    {{if gt .Article.CommentCount 0}}
                     ,
-                    <a href="{{.Article.URL}}#pipeComments">
-                        {{.Article.CommentCount}} {{$.I18n.Comment}}
-                    </a>
-                    {{end}}
+                    <a href="{{.Article.URL}}#disqus_thread">0 Comment</a>
                     {{if .Article.Editable}} ,
                     <a href="{{$.Conf.Server}}/admin/articles/post?id={{.Article.ID}}">
                         <svg>

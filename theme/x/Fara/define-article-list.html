@@ -26,13 +26,9 @@
                     {{$item.ViewCount}} {{$.I18n.View}}
                 </a>
             </div>
-            {{if gt .CommentCount 0}}
             <div>
-                <a href="{{$item.URL}}#pipeComments">
-                    {{$item.CommentCount}} {{$.I18n.Comment}}
-                </a>
+                <a href="{{$item.URL}}#disqus_thread">0 Comment</a>
             </div>
-            {{end}}
             {{if .Editable}}
             <div>
                 <a href="{{$.Conf.Server}}/admin/articles/post?id={{$item.ID}}">

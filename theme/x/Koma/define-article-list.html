@@ -56,13 +56,11 @@
                 </svg>
             </a>
 
-            <a href="{{.URL}}#pipeComments" aria-label="{{$.I18n.Comment}}"
-               class="pipe-tooltipped pipe-tooltipped--n">
-                {{.CommentCount}}
-                <svg>
-                    <use xlink:href="#icon-comment"></use>
-                </svg>
-            </a>
+            <a href="{{.URL}}#disqus_thread" aria-label="{{$.I18n.Comment}}"
+               class="pipe-tooltipped pipe-tooltipped--n">0 Comment</a>
+             {{/*<svg>*/}}
+                    {{/*<use xlink:href="#icon-comment"></use>*/}}
+             {{/*</svg>*/}}
             {{if .Editable}}
             <a href="{{$.Conf.Server}}/admin/articles/post?id={{.ID}}"
                aria-label="{{$.I18n.Edit}}"

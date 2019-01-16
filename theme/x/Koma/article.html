@@ -73,15 +73,15 @@
                     </svg>
                 </a>
 
-                {{if gt .Article.CommentCount 0}}
-                <a href="{{.Article.URL}}#pipeComments" aria-label="{{$.I18n.Comment}}"
-                   class="pipe-tooltipped pipe-tooltipped--n">
-                    {{.Article.CommentCount}}
-                    <svg>
-                        <use xlink:href="#icon-comment"></use>
-                    </svg>
-                </a>
-                {{end}}
+                <a href="{{.Article.URL}}#disqus_thread" aria-label="{{$.I18n.Comment}}"
+                   class="pipe-tooltipped pipe-tooltipped--n">0 Comment</a>
+                {{/*<a href="{{.Article.URL}}#pipeComments" aria-label="{{$.I18n.Comment}}"*/}}
+                   {{/*class="pipe-tooltipped pipe-tooltipped--n">*/}}
+                    {{/*{{.Article.CommentCount}}*/}}
+                    {{/*<svg>*/}}
+                        {{/*<use xlink:href="#icon-comment"></use>*/}}
+                    {{/*</svg>*/}}
+                {{/*</a>*/}}
 
                 {{if .Article.Editable}}
                 <a href="{{$.Conf.Server}}/admin/articles/post?id={{.Article.ID}}"
