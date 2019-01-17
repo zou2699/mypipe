@@ -173,6 +173,7 @@ func showArticleAction(c *gin.Context) {
 		ThumbnailURL:   mdResult.ThumbURL,
 		Content:        template.HTML(mdResult.ContentHTML + "\n" + articleSignSetting),
 		Editable:       session.UID == authorModel.ID,
+		Path:           articleModel.Path,
 	}
 
 	page := util.GetPage(c)

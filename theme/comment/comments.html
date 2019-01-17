@@ -34,7 +34,7 @@
             load : function disqus(){
                 var disqus_config = function () {
                     this.page.url = "{{.Article.URL}}";
-                    this.page.identifier = "{{.Article.ID}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    this.page.identifier = "{{.Article.Path}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
                 };
                 var d = document, s = d.createElement('script');
                 s.src = 'https://zouhl-com.disqus.com/embed.js';

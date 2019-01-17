@@ -40,6 +40,7 @@ type ThemeArticle struct {
 	ThumbnailURL   string        `json:",omitempty"`
 	Content        template.HTML `json:",omitempty"`
 	Editable       bool          `json:",omitempty"`
+	Path           string        `json:"path"`
 }
 
 // ThemeTag represents theme tag.
