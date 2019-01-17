@@ -65,25 +65,25 @@
         {{.I18n.Search}}
     </a>
 
-    {{if eq .User.URole 0}}
-    <a href="{{.Conf.Server}}/login" class="fn-flex-center">
-        <svg>
-            <use xlink:href="#icon-login"></use>
-        </svg>
-        {{.I18n.Login}}
-    </a>
-    <a href="{{.Conf.Server}}/register" class="fn-flex-center">
-        <svg>
-            <use xlink:href="#icon-register"></use>
-        </svg>
-        {{.I18n.Register}}
-    </a>
-    {{else}}
-    <a class="fn-flex-center"
-       href="{{.Conf.Server}}/{{if ne .User.URole 4}}admin/{{end}}">
-        <img data-src="{{.User.AvatarURLWithSize 64}}" />
-        {{.I18n.manage}}
-    </a>
-    {{end}}
+    {{/*{{if eq .User.URole 0}}*/}}
+    {{/*<a href="{{.Conf.Server}}/login" class="fn-flex-center">*/}}
+        {{/*<svg>*/}}
+            {{/*<use xlink:href="#icon-login"></use>*/}}
+        {{/*</svg>*/}}
+        {{/*{{.I18n.Login}}*/}}
+    {{/*</a>*/}}
+    {{/*<a href="{{.Conf.Server}}/register" class="fn-flex-center">*/}}
+        {{/*<svg>*/}}
+            {{/*<use xlink:href="#icon-register"></use>*/}}
+        {{/*</svg>*/}}
+        {{/*{{.I18n.Register}}*/}}
+    {{/*</a>*/}}
+    {{/*{{else}}*/}}
+    {{/*<a class="fn-flex-center"*/}}
+       {{/*href="{{.Conf.Server}}/{{if ne .User.URole 4}}admin/{{end}}">*/}}
+        {{/*<img data-src="{{.User.AvatarURLWithSize 64}}" />*/}}
+        {{/*{{.I18n.manage}}*/}}
+    {{/*</a>*/}}
+    {{/*{{end}}*/}}
 </nav>
 {{end}}
