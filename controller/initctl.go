@@ -25,11 +25,11 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
 	"github.com/parnurzeal/gorequest"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 func showInitPageAction(c *gin.Context) {

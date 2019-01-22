@@ -20,7 +20,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/b3log/pipe/model"
+	"github.com/zou2699/mypipe/model"
 	"gopkg.in/yaml.v2"
 )
 

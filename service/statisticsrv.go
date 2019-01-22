@@ -20,8 +20,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/b3log/pipe/model"
 	"github.com/jinzhu/gorm"
+	"github.com/zou2699/mypipe/model"
 )
 
 // Statistic service.

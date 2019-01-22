@@ -19,8 +19,8 @@ package console
 import (
 	"net/http"
 
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
+	"github.com/zou2699/mypipe/util"
 )
 
 // LoginCheck checks login or not.

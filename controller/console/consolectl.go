@@ -21,8 +21,8 @@ import (
 	"path/filepath"
 	"text/template"
 
-	"github.com/b3log/pipe/model"
 	"github.com/gin-gonic/gin"
+	"github.com/zou2699/mypipe/model"
 )
 
 // ShowAdminPagesAction shows admin pages.

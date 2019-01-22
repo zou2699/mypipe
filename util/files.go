@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/b3log/pipe/log"
+	"github.com/zou2699/mypipe/log"
 )
 
 // Logger

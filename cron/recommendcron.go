@@ -20,11 +20,11 @@ import (
 	"html/template"
 	"time"
 
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/dustin/go-humanize"
 	"github.com/parnurzeal/gorequest"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 // RecommendArticles saves all recommend articles.
@@ -72,10 +72,10 @@ func refreshRecommendArticles() {
 			AvatarURL: authorModel.AvatarURL,
 		}
 		themeArticle := &model.ThemeArticle{
-			Title:     article.Title,
-			URL:       blogURL + article.Path,
-			CreatedAt: humanize.Time(article.CreatedAt),
-			Author:    author,
+			Title:        article.Title,
+			URL:          blogURL + article.Path,
+			CreatedAt:    humanize.Time(article.CreatedAt),
+			Author:       author,
 			CommentCount: article.CommentCount,
 			ViewCount:    article.ViewCount,
 			ThumbnailURL: util.ImageSize(images[i], 280, 90),

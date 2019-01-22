@@ -17,9 +17,9 @@
 package controller
 
 import (
-	"github.com/b3log/pipe/service"
 	"github.com/gin-gonic/gin"
 	"github.com/ikeikeikeike/go-sitemap-generator/stm"
+	"github.com/zou2699/mypipe/service"
 )
 
 func outputSitemapAction(c *gin.Context) {

@@ -19,7 +19,7 @@ package console
 import (
 	"html/template"
 
-	"github.com/b3log/pipe/util"
+	"github.com/zou2699/mypipe/util"
 )
 
 // ConsoleArticle represents console article.

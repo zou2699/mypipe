@@ -25,12 +25,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3log/pipe/i18n"
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/dustin/go-humanize"
 	"github.com/gin-gonic/gin"
+	"github.com/zou2699/mypipe/i18n"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 func resolveBlog(c *gin.Context) {

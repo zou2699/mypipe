@@ -19,11 +19,11 @@ package service
 import (
 	"os"
 
-	"github.com/b3log/pipe/log"
-	"github.com/b3log/pipe/model"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"  // mysql
 	_ "github.com/jinzhu/gorm/dialects/sqlite" // sqlite
+	"github.com/zou2699/mypipe/log"
+	"github.com/zou2699/mypipe/model"
 )
 
 // Logger

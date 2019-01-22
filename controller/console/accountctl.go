@@ -19,9 +19,9 @@ package console
 import (
 	"net/http"
 
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 // UpdatePasswordAction updates a user's password.

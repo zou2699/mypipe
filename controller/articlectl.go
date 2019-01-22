@@ -24,12 +24,12 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/b3log/pipe/cron"
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
 	"github.com/vinta/pangu"
+	"github.com/zou2699/mypipe/cron"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 func showArticlesAction(c *gin.Context) {

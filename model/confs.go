@@ -28,9 +28,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3log/pipe/log"
 	"github.com/jinzhu/gorm"
-	"github.com/b3log/pipe/util"
+	"github.com/zou2699/mypipe/log"
+	"github.com/zou2699/mypipe/util"
 )
 
 // Logger

@@ -22,10 +22,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/theme"
-	"github.com/b3log/pipe/util"
 	"github.com/jinzhu/gorm"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/theme"
+	"github.com/zou2699/mypipe/util"
 )
 
 // Init service.

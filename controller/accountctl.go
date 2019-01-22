@@ -24,14 +24,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"github.com/qiniu/api.v7/storage"
 	"github.com/satori/go.uuid"
 	"github.com/tredoe/osutil/user/crypt/sha512_crypt"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 // loginAction login a user.

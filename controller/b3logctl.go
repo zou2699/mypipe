@@ -21,10 +21,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/b3log/pipe/model"
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
+	"github.com/zou2699/mypipe/model"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 // addSymCommentAction adds a comment come from Sym. Sees https://hacpai.com/article/1457158841475 for more details.
@@ -106,11 +106,11 @@ func addSymArticleAction(c *gin.Context) {
 	}
 
 	article := &model.Article{
-		BlogID:   blogID,
-		AuthorID: blogAdmin.ID,
-		Title:    requestArticle["articleTitle"].(string),
-		Tags:     requestArticle["articleTags"].(string),
-		Content:  requestArticle["articleContent"].(string),
+		BlogID:      blogID,
+		AuthorID:    blogAdmin.ID,
+		Title:       requestArticle["articleTitle"].(string),
+		Tags:        requestArticle["articleTags"].(string),
+		Content:     requestArticle["articleContent"].(string),
 		Commentable: true,
 	}
 	article.ID = articleId

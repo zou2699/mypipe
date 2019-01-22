@@ -26,12 +26,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/b3log/pipe/service"
-	"github.com/b3log/pipe/util"
 	"github.com/gin-gonic/gin"
 	"github.com/parnurzeal/gorequest"
 	"github.com/qiniu/api.v7/storage"
 	"github.com/satori/go.uuid"
+	"github.com/zou2699/mypipe/service"
+	"github.com/zou2699/mypipe/util"
 )
 
 var ut = &uploadToken{}
