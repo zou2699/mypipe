@@ -82,7 +82,8 @@
           class="checkbox__icon"></span>
           {{ $t('top', $store.state.locale) }}
         </label>
-        <label class="checkbox btn--space" v-if="!$route.query.id">
+        <!--<label class="checkbox btn&#45;&#45;space" v-if="!$route.query.id">-->
+        <label class="checkbox btn--space" v-if="false">
           <input
             type="checkbox"
             :checked="syncToCommunity"
@@ -132,7 +133,7 @@
   import {asyncLoadScript, LazyLoadImage} from '~/plugins/utils'
 
   export default {
-    data () {
+    data() {
       return {
         label: {
           loading: this.$t('uploading', this.$store.state.locale),
@@ -180,7 +181,7 @@
         edited: false
       }
     },
-    head () {
+    head() {
       return {
         title: `${this.$t(this.$route.query.id ? 'editArticle' : 'postArticle', this.$store.state.locale)} - ${this.$store.state.blogTitle}`
       }
@@ -192,7 +193,7 @@
         }
       }
     },
-    beforeRouteUpdate (to, from, next) {
+    beforeRouteUpdate(to, from, next) {
       if (from.query.id && from.path === '/admin/articles/post' && (this.edited || this.originalContent !== this.content)) {
         if (confirm(this.$t('isGoTo', this.$store.state.locale))) {
           next()
@@ -201,7 +202,7 @@
         next()
       }
     },
-    beforeRouteLeave (to, from, next) {
+    beforeRouteLeave(to, from, next) {
       if (from.query.id && from.path === '/admin/articles/post' && (this.edited || this.originalContent !== this.content)) {
         if (confirm(this.$t('isGoTo', this.$store.state.locale))) {
           next()
@@ -211,7 +212,7 @@
       }
     },
     methods: {
-      async fetchUpload (url, succCB) {
+      async fetchUpload(url, succCB) {
         const responseData = await this.axios.post(`${this.$store.state.blogURL}/fetch-upload`, {
           url
         })
@@ -224,7 +225,7 @@
           })
         }
       },
-      _paseMD (text, previewRef) {
+      _paseMD(text, previewRef) {
         previewRef.innerHTML = `<div class="pipe-content__reset">${text}</div>`
         LazyLoadImage()
         let hasMathJax = false
@@ -277,7 +278,7 @@
           }
         }
       },
-      async parseMarkdown (value, previewRef) {
+      async parseMarkdown(value, previewRef) {
         this.$set(this, 'content', value)
         this.setLocalstorage('content')
         if (previewRef) {
@@ -298,7 +299,7 @@
           }
         }
       },
-      setLocalstorage (type) {
+      setLocalstorage(type) {
         if (type !== 'content') {
           this.$set(this, 'edited', true)
         }
@@ -343,13 +344,13 @@
             break
         }
       },
-      async getThumbs () {
+      async getThumbs() {
         const responseData = await this.axios.get(`console/thumbs?n=5&w=768&h=180`)
         if (responseData) {
           this.$set(this, 'thumbs', responseData)
         }
       },
-      async edit (id) {
+      async edit(id) {
         if (!this.$refs.form.validate()) {
           return
         }
@@ -399,7 +400,7 @@
           this.$set(this, 'errorMsg', responseData.msg)
         }
       },
-      async remove () {
+      async remove() {
         if (!confirm(this.$t('confirmDelete', this.$store.state.locale))) {
           return
         }
@@ -413,7 +414,7 @@
           this.$router.push('/admin/articles')
         }
       },
-      _setDefaultLocalStorage () {
+      _setDefaultLocalStorage() {
         if (localStorage.getItem('article-title')) {
           this.title = localStorage.getItem('article-title')
           this.$set(this, 'title', localStorage.getItem('article-title'))
@@ -469,7 +470,7 @@
         }
       }
     },
-    async mounted () {
+    async mounted() {
       const id = this.$route.query.id
 
       window.onbeforeunload = (event) => {
@@ -511,12 +512,14 @@
     margin: 0 auto
     width: 720px
     position: relative
+
     &-refresh
       position: absolute
       right: 15px
       bottom: 15px
       cursor: pointer
       z-index: 10
+
       svg
         color: #fff
         height: 20px
