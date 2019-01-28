@@ -5,7 +5,7 @@
     "OpenRegister": true,
     "RuntimeMode": "dev",
     "LogLevel": "debug",
-    "ShowSQL": true,
+    "ShowSQL": false,
     "SessionSecret": "BEYOND",
     "SessionMaxAge": 86400,
     "SQLite": "./pipe.db",
