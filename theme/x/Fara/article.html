@@ -88,67 +88,67 @@
             {{template "comment/comments" .}}
         </div>
 
-        <div class="fn-flex post__about">
-            <div class="fn-flex-1 article__meta--1">
-                <div class="module__header">
-                    {{.I18n.RecommendArticle}}
-                </div>
-                <div class="article__meta article__meta--page">
-                    {{range .RecommendArticles}}
-                    <div class="fn-flex">
-                        <a class="article__avatar pipe-tooltipped pipe-tooltipped--n"
-                           href="{{.Author.URL}}"
-                           aria-label="{{.Author.Name}}"
-                           data-src='{{if eq "" .Author.AvatarURL}}{{.Author.AvatarURLWithSize 74}}{{else}}{{.Author.AvatarURL}}{{end}}'
-                        ></a>
-                        <div class="fn-flex-1">
-                            <a href="{{.URL}}" class="module__list-title">{{.Title}}</a>
-                            <br>
-                            <time class="ft-12">{{.CreatedAt}}</time>
-                        </div>
-                    </div>
-                    {{end}}
-                </div>
-            </div>
-            <div class="fn-flex-1 article__meta--3">
-                <div class="module__header">
-                    {{.I18n.MostViewArticle}}
-                </div>
-                <div class="article__meta article__meta--page">
-                    {{range $index, $item := .MostViewArticles}}
-                    {{if lt $index 7}}
-                    <div class="fn-flex">
-                        {{if gt $.UserCount 1}}
-                        <a class="article__avatar pipe-tooltipped pipe-tooltipped--n"
-                           href="{{$item.Author.URL}}"
-                           aria-label="{{$item.Author.Name}}"
-                           data-src='{{if eq "" $item.Author.AvatarURL}}{{$item.Author.AvatarURLWithSize 74}}{{else}}{{$item.Author.AvatarURL}}{{end}}'
-                        ></a>
-                        {{end}}
-                        <div class="fn-flex-1">
-                            <a href="{{$item.URL}}" class="module__list-title">{{$item.Title}}</a>
-                            <br>
-                            <time class="ft-12">{{$item.CreatedAt}}</time>
-                        </div>
-                    </div>
-                    {{end}}
-                    {{end}}
-                </div>
-            </div>
-            {{if eq .Setting.BasicNoticeBoard ""}}
-            {{else}}
-            <div class="fn-flex-1 article__meta--2">
-                <div class="module__header">
-                    {{.I18n.noticeBoard}}
-                </div>
-                <div class="article__meta article__meta--page">
-                    {{.Setting.BasicNoticeBoard}}
-                </div>
-            </div>
-            {{end}}
-        </div>
+        {{/*<div class="fn-flex post__about">*/}}
+            {{/*<div class="fn-flex-1 article__meta--1">*/}}
+                {{/*<div class="module__header">*/}}
+                    {{/*{{.I18n.RecommendArticle}}*/}}
+                {{/*</div>*/}}
+                {{/*<div class="article__meta article__meta--page">*/}}
+                    {{/*{{range .RecommendArticles}}*/}}
+                    {{/*<div class="fn-flex">*/}}
+                        {{/*<a class="article__avatar pipe-tooltipped pipe-tooltipped--n"*/}}
+                           {{/*href="{{.Author.URL}}"*/}}
+                           {{/*aria-label="{{.Author.Name}}"*/}}
+                           {{/*data-src='{{if eq "" .Author.AvatarURL}}{{.Author.AvatarURLWithSize 74}}{{else}}{{.Author.AvatarURL}}{{end}}'*/}}
+                        {{/*></a>*/}}
+                        {{/*<div class="fn-flex-1">*/}}
+                            {{/*<a href="{{.URL}}" class="module__list-title">{{.Title}}</a>*/}}
+                            {{/*<br>*/}}
+                            {{/*<time class="ft-12">{{.CreatedAt}}</time>*/}}
+                        {{/*</div>*/}}
+                    {{/*</div>*/}}
+                    {{/*{{end}}*/}}
+                {{/*</div>*/}}
+            {{/*</div>*/}}
+            {{/*<div class="fn-flex-1 article__meta--3">*/}}
+                {{/*<div class="module__header">*/}}
+                    {{/*{{.I18n.MostViewArticle}}*/}}
+                {{/*</div>*/}}
+                {{/*<div class="article__meta article__meta--page">*/}}
+                    {{/*{{range $index, $item := .MostViewArticles}}*/}}
+                    {{/*{{if lt $index 7}}*/}}
+                    {{/*<div class="fn-flex">*/}}
+                        {{/*{{if gt $.UserCount 1}}*/}}
+                        {{/*<a class="article__avatar pipe-tooltipped pipe-tooltipped--n"*/}}
+                           {{/*href="{{$item.Author.URL}}"*/}}
+                           {{/*aria-label="{{$item.Author.Name}}"*/}}
+                           {{/*data-src='{{if eq "" $item.Author.AvatarURL}}{{$item.Author.AvatarURLWithSize 74}}{{else}}{{$item.Author.AvatarURL}}{{end}}'*/}}
+                        {{/*></a>*/}}
+                        {{/*{{end}}*/}}
+                        {{/*<div class="fn-flex-1">*/}}
+                            {{/*<a href="{{$item.URL}}" class="module__list-title">{{$item.Title}}</a>*/}}
+                            {{/*<br>*/}}
+                            {{/*<time class="ft-12">{{$item.CreatedAt}}</time>*/}}
+                        {{/*</div>*/}}
+                    {{/*</div>*/}}
+                    {{/*{{end}}*/}}
+                    {{/*{{end}}*/}}
+                {{/*</div>*/}}
+            {{/*</div>*/}}
+            {{/*{{if eq .Setting.BasicNoticeBoard ""}}*/}}
+            {{/*{{else}}*/}}
+            {{/*<div class="fn-flex-1 article__meta--2">*/}}
+                {{/*<div class="module__header">*/}}
+                    {{/*{{.I18n.noticeBoard}}*/}}
+                {{/*</div>*/}}
+                {{/*<div class="article__meta article__meta--page">*/}}
+                    {{/*{{.Setting.BasicNoticeBoard}}*/}}
+                {{/*</div>*/}}
+            {{/*</div>*/}}
+            {{/*{{end}}*/}}
+        {{/*</div>*/}}
 
-        {{template "comment/editor" .}}
+        {{/*{{template "comment/editor" .}}*/}}
         {{if .pjax}}{{noescape "<!---- pjax {#pjax} end ---->"}}{{end}}
     </div>
     {{template "Fara/footer" .}}
