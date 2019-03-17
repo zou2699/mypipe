@@ -47,7 +47,7 @@ func init() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
 	f, _ := os.Create("mypipe.log")
-	writer := io.MultiWriter(f)
+	writer := io.MultiWriter(f, os.Stdout)
 
 	log.SetLevel("warn")
 	logger = log.NewLogger(writer)
@@ -63,7 +63,7 @@ func init() {
 	} else {
 		gin.SetMode(gin.ReleaseMode)
 	}
-	gin.DefaultWriter = io.MultiWriter(writer)
+	gin.DefaultWriter = writer
 }
 
 // Entry point.
